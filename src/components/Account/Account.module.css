@@ -1,0 +1,18 @@
+.header_account{
+   display:grid;
+   grid-template-areas: "textt textt textt"
+                        "chip chip chip "
+                        "chip chip chip";
+   }
+   
+   .header_account_text{
+      grid-area: textt;
+   }
+   
+   .header_account_chip{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 20px;
+      grid-area: chip;
+   }

@@ -1,0 +1,46 @@
+.main_content{
+   display:grid;
+   width: 200px;
+   height: 300px;
+   padding: 20px 20px 20px 20px;
+   margin: 10px;
+   border: 3px solid #000080;
+   grid-template-areas: "img img ."
+                        "img img ."
+                        "name . checkbox"
+                        "price . checkbox"
+                        "cort . checkbox";
+   border-radius: 20px;
+}
+
+.main_content:hover {
+   -webkit-transform: scale(1.1);
+   -ms-transform: scale(1.1);
+   transform: scale(1.1);
+ }
+   
+
+.main_img{
+   grid-area: img;
+   width: 150px;
+   height: auto;
+}
+
+.main_name{
+   grid-area: name;
+   font-weight:bold;
+}
+
+.main_price{
+   grid-area: price;
+   opacity: 0.5;
+}
+
+.main_cort{
+   grid-area: cort;
+   font-weight:bold;
+}
+
+.main_checkbox{
+   grid-area: checkbox;
+}

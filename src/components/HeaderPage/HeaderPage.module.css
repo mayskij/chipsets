@@ -1,0 +1,28 @@
+.headerpage{
+display:grid;
+grid-template-areas: "textt search input"
+                     "chip chip chip "
+                     "chip chip chip ";
+}
+
+.headerpage_text{
+   margin: 5px;
+   grid-area: textt;
+}
+
+.headerpage_search{
+   grid-area: search;
+   padding-left: 400px
+}
+.headerpage_chip{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   margin: 20px;
+   grid-area: chip;
+}
+.headerpage_input{
+   grid-area: input;
+   padding-right: 100px;
+   border-radius: 10px 10px 10px 10px;
+}
