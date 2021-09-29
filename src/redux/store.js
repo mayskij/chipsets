@@ -1,10 +1,12 @@
 import { combineReducers, createStore } from "redux";
-import chipsetReducer from "./chipset_reducer";
-import accountReducer from "./account_reducer";
+import chipset from "./chipset_reducer";
+import account from "./account_reducer";
+import basket from "./basket_reducer";
 
 const reducers = combineReducers({
-   chipset: chipsetReducer,
-   account: accountReducer
+   chipset,
+   account,
+   basket,
 })
 
 let store = createStore(reducers)

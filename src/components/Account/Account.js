@@ -13,7 +13,7 @@ const Account = () => {
 
    let chipElement =
       items.map(c =>
-         <Chipset key={c.id} id={c.id} images={c.images} name={c.name} cort={c.cort} checkbox={c.checkbox} />)
+         <Chipset key={c.id} id={c.id} images={c.images} name={c.name} cort={c.cort} value={""} />)
 
 
    return (

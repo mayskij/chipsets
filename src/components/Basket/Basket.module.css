@@ -3,13 +3,14 @@
    width: 500px;
    height: auto;
    padding: 35px 35px 35px 35px;
-   border: 3px solid blue;
+   border: 3px solid #000080;
    grid-template-areas: "textt . close"
                         ". img ."
                         ". img ."
                         ". imgtext ."
                         ". imgcontent ."
                         ". btn .";
+   border-radius: 20px;
 }
   
 .header_basket{
@@ -35,4 +36,9 @@
 
 .basket__btn{
 grid-area: btn;
+}
+
+.headerpage_chip{
+   display: flex;
+   margin: 20px;
 }

@@ -1,33 +1,30 @@
 import React from 'react'
 import styles from "./Chipset.module.css"
-import { Checkbox } from 'antd';
-import { useDispatch } from "react-redux"
-import { chipset } from '../../redux/chipset_reducer';
+import { Button } from 'antd';
 
-const Chipset = ({ ...props }) => {
+const Chipset = ({ id, name, cort, value, images, onAddChipset }) => {
 
-   const dispatch = useDispatch()
-
-   const setChipset = (e) => {
-      dispatch(chipset(e));
+   const onAddClickChipset = () => {
+      const obj = { id, name, cort, images }
+      onAddChipset(obj)
    }
 
 
    return (
       <div className={styles.main_content}>
          <div className={styles.main_block}>
-            <img className={styles.main_img} src={props.images} />
+            <img className={styles.main_img} src={images} />
             <h1 className={styles.main_name}>
-               {props.name}
+               {name}
             </h1>
             <div className={styles.main_price}>
                Цена:
             </div>
             <div className={styles.main_cort}>
-               {props.cort}
+               {cort} руб.
             </div>
             <div className={styles.main_checkbox}>
-               <Checkbox onChange={setChipset}></Checkbox>
+               <Button style={{ borderRadius: "15px" }} type="primary" danger onClick={onAddClickChipset}>{value}</Button>
             </div>
          </div>
       </div>
@@ -35,8 +32,3 @@ const Chipset = ({ ...props }) => {
 }
 
 export default Chipset
-
-
-
-// onChange={onChange}
-// ReactDOM.render();
